@@ -1,4 +1,8 @@
 # GET http://localhost:3000/contacts
 
-GET http://localhost:3000/contacts/63c33cf95771ce743afb74c3
+# GET http://localhost:3000/contacts/63c33cf95771ce743afb74c3
+
+# GET https://nameapi.onrender.com/contacts
+
+GET https://nameapi.onrender.com/contacts/63c33cf95771ce743afb74c3
 
