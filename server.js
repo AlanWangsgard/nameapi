@@ -1,18 +1,20 @@
-const http = require('http');
+// const http = require('http');
 
-const express = require('express')
+const express = require("express")
 const app = express()
-const port = process.env.PORT || 3000;
-const mongodb = require('./databases/connect');
+const port = process.env.PORT || 3000
+const bodyparser = require("body-parser")
+const mongodb = require("./databases/connect")
 
 app.use("/", require("./routes"))
+app.use(bodyparser.json())
 app.use("/contacts", require("./routes/contacts"))
 
 mongodb.initDb((err, mongodb) => {
-  if (err) {
-    console.log(err);
-  } else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
-  }
-});
+	if (err) {
+		console.log(err)
+	} else {
+		app.listen(port)
+		console.log(`Connected to DB and listening on ${port}`)
+	}
+})

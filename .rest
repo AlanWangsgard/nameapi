@@ -1,8 +1,28 @@
-# GET http://localhost:3000/contacts
-
-# GET http://localhost:3000/contacts/63c33cf95771ce743afb74c3
-
-# GET https://nameapi.onrender.com/contacts
-
+###
+GET http://localhost:3000/contacts
+###
+GET http://localhost:3000/contacts/63c33cf95771ce743afb74c3
+###
+GET https://nameapi.onrender.com/contacts
+###
 GET https://nameapi.onrender.com/contacts/63c33cf95771ce743afb74c3
+
+###
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Stone", "lastName":"Cold", "email":"steveaustin@test.com", "favoriteColor":"purple", "birthday":"01/02/1980"
+}
+
+###
+PUT http://localhost:3000/contacts/63c99ef33fc1e5f2348225ed HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"sam", "lastName":"smith", "email":"ss@gmail.com", "favoriteColor":"orange", "birthday":"12/09/1987"
+}
+
+###
+DELETE http://localhost:3000/contacts/63c99ef33fc1e5f2348225ed HTTP/1.1
 
