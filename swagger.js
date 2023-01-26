@@ -6,7 +6,7 @@ const doc = {
     description: 'Description',
   },
   host: 'nameapi.onrender.com/contacts',
-  schemes: ['http'],
+  schemes: ['https'],
 };
 
 const outputFile = 'routes/swagger.json';

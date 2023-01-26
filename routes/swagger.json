@@ -8,7 +8,7 @@
   "host": "nameapi.onrender.com/contacts",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
