@@ -1,5 +1,7 @@
 const mongodb = require("../databases/connect")
 const ObjectId = require("mongodb").ObjectId
+const {validationResult} = require("express-validator")
+
 
 const getAll = async (req, res) => {
 	const result = await mongodb.getDb().db().collection("Contacts").find()
@@ -23,6 +25,10 @@ const getSingle = async (req, res) => {
 }
 
 const addContact =async(req, res) =>{
+	const errors = validationResult(req)
+	if (!errors.isEmpty()) {
+		return res.status(400).json({ errors: errors.array() });
+	  }
 	const contact = {
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
